@@ -1,0 +1,15 @@
+
+.navbar-nav li a{
+    color: #fff!important;
+    font-weight: 500;
+}
+
+.navbar-brand{
+    color: #fff!important;
+    font-weight: bold;
+
+}
+
+.hero{
+    max-height:30rem!important;
+}
