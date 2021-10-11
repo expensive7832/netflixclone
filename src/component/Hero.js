@@ -18,22 +18,25 @@ function Hero() {
                setMovies(
                  res.data.results[Math.floor(Math.random() * res.data.results.length) + 1]
                );
+
             return res;
+            
         }
         getRandomMovie();
+        
     }, []);
 
+    
     console.log(Movies);
     const baseImageUrl = "https://image.tmdb.org/t/p/original/";
 
     const heroStyling = {
-        backgroundColor: "#333",
+        
         backgroundImage: `url(${baseImageUrl}${Movies.poster_path})`,
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        backgroundBlendMode: "multiply",
-        height: "80vh"
+        height: "80vh",
     }
    
     return (
