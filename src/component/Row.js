@@ -48,7 +48,7 @@ const Row = ({title, fetchUrl, isLarge}) => {
 
     return (
         <div className="bg-dark text-white">
-            <div className="ms-2 d-flex flex-column align-items-center">
+            <div className="d-flex flex-column align-items-center">
                 <h3 className="align-self-start title py-2">{title}</h3>
                 <div data-aos="zoom-up" data-aos-duration="2000" className="poster_image d-flex flex-row align-items-center">
                 {Movie.map((movies, index) => {

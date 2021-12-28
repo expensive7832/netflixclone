@@ -31,12 +31,13 @@ function Hero() {
     const baseImageUrl = "https://image.tmdb.org/t/p/original/";
 
     const heroStyling = {
-        
+        display: "grid",
+        placeItems: "center",
         backgroundImage: `url(${baseImageUrl}${Movies.poster_path})`,
         backgroundPosition: "center center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        height: "80vh",
+        
     }
    
     return (
@@ -44,9 +45,9 @@ function Hero() {
             <section className="container-fluid hero">
                 <div className="row">
                     <div className="col-12 col-md-6 text-center" style={{paddingTop: "7rem"}}>
-                    <h2 data-aos="flip-right" className="display-6 fw-bold text-white">{Movies?.name || Movies.title}</h2>
+                    <h2 data-aos="flip-right" className="display-6 fw-bold text-white">{Movies?.name || Movies?.title}</h2>
                         <div className="d-flex justify-content-center">
-                            <button className="btn text-white mx-3"><FaYoutube/>Watch Now</button>
+                            <button className="btn text-white mx-3"><FaYoutube />Watch Now</button>
                             <button className="btn text-white mx-3"><FaFlag/>Save For Later</button>
                         </div>
                         <p data-aos="flip-down" className="pt-3 text-white m-auto">{Movies?.overview}</p>
