@@ -14,9 +14,9 @@ function Hero() {
 
     useEffect(() => {
         const getRandomMovie = async () => {
-            const res = await axios.get(request.fetchSciFi);
+            const res = await axios?.get(request?.fetchSciFi);
                setMovies(
-                 res.data.results[Math.floor(Math.random() * res.data.results.length) + 1]
+                 res?.data?.results[Math?.floor(Math?.random() * res?.data?.results?.length) + 1]
                );
 
             return res;
@@ -27,7 +27,6 @@ function Hero() {
     }, []);
 
     
-    console.log(Movies);
     const baseImageUrl = "https://image.tmdb.org/t/p/original/";
 
     const heroStyling = {
