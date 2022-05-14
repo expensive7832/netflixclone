@@ -14,8 +14,8 @@ const Row = ({title, fetchUrl, isLarge}) => {
         }else{
             movieTrailer(movies?.name || movies?.title || "" )
             .then((url) => {
-                const urlSearch = new URLSearchParams(new URL(url).search);
-               const youtubeID = urlSearch.get("v");
+                const urlSearch = new URLSearchParams(new URL(url)?.search);
+               const youtubeID = urlSearch?.get("v");
                 settrailer(youtubeID);
             }).catch((e) =>{
                 alert(e)
@@ -27,8 +27,8 @@ const Row = ({title, fetchUrl, isLarge}) => {
 
     useEffect(() => {
         const getMovie = async() =>{
-            const res = await axios.get(fetchUrl);
-            setMovie(res.data.results);
+            const res = await axios?.get(fetchUrl);
+            setMovie(res?.data?.results);
             return res;
         }
         getMovie();
@@ -52,7 +52,7 @@ const Row = ({title, fetchUrl, isLarge}) => {
                 <h3 className="align-self-start title py-2">{title}</h3>
                 <div data-aos="zoom-up" data-aos-duration="2000" className="poster_image d-flex align-items-center">
                 {Movie.map((movies, index) => {
-                   return  <img onClick={() => watchVid(movies)} key={index} src={`${baseImageUrl}${isLarge ? movies.poster_path : movies.backdrop_path}`} loading="lazy" alt={movies.name || movies.title } className={isLarge && "large_img" } />
+                   return  <img onClick={() => watchVid(movies)} key={index} src={`${baseImageUrl}${isLarge ? movies?.poster_path : movies?.backdrop_path}`} loading="lazy" alt={movies?.name || movies?.title } className={isLarge && "large_img" } />
                 })}
                 </div>
             </div>
